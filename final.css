@@ -1,0 +1,18 @@
+h1{
+  font-size:60px;
+  color:#4169e1;
+  width: 400px;
+  padding: 20px;
+  text-algin: center;
+  margin: 40px auto;
+}
+
+button{
+  display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #4169e1;
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+}
