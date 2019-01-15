@@ -1,18 +1,110 @@
 h1{
   font-size:60px;
-  color:#4169e1;
+  color:#111111;
   width: 400px;
   padding: 20px;
-  text-algin: center;
-  margin: 40px auto;
+  text-align: center;
+  margin: auto;
 }
 
 button{
   display: inline-block;
-    padding: 0.5em 1em;
+    width: 300px;
+    padding: 1.5em 30em;
+    margin: 20px;
     text-decoration: none;
-    background: #4169e1;
+    background: #111111;
     color: #FFF;
     border-bottom: solid 4px #627295;
     border-radius: 3px;
+}
+
+body {
+  background-color: #FFFFCC
+}
+/*以下画像をスライドさせるプログラム*/
+.button_wrapper{
+   text-align:center;
+}
+
+.loop_css {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  width: 100vw;
+  height: 400px;
+  left: 60%;
+  margin-left: -60vw;
+  overflow: hidden;
+}
+
+.loop_css img {
+  width: auto;
+  height: 100%;
+}
+
+.loop_css img:first-child {
+  -webkit-animation: loop 50s -25s linear infinite;
+  animation: loop 50s -25s linear infinite;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.loop_css img + img {
+  -webkit-animation: loop2 50s  linear infinite;
+  animation: loop2 50s linear infinite;
+}
+
+/*アニメーション*/
+@-webkit-keyframes loop {
+  0% {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes loop {
+  0% {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes loop2 {
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-200%);
+    -ms-transform: translateX(-200%);
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes loop2 {
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-200%);
+    -ms-transform: translateX(-200%);
+    transform: translateX(-200%);
+  }
 }
